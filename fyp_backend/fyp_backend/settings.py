@@ -72,27 +72,26 @@ TEMPLATES = [
 # WSGI_APPLICATION = 'fyp_backend.wsgi.application'
 ASGI_APPLICATION = 'fyp_backend.asgi.application'
 
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("localhost", 6379)],
-#         },
-#     },
-# }
-
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("23.20.173.30", 6379)],
+            "hosts": [("localhost", 6379)],
         },
     },
 }
 
-CORS_ALLOWED_ORIGINS = [
-    '*',
-]
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels_redis.core.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [("23.20.173.30", 6379)],
+#         },
+#     },
+# }
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 
 # Database
