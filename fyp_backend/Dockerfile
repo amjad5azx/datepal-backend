@@ -1,6 +1,6 @@
 FROM python:3
 
-RUN pip3 install django daphne channels pillow numpy tensorflow pymongo
+RUN pip3 install django daphne channels pillow numpy tensorflow pymongo corsheaders
 
 COPY . .
 
