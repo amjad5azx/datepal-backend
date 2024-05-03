@@ -1,6 +1,6 @@
 FROM python:3
 
-RUN pip3 install django daphne channels pillow numpy tensorflow pymongo django-cors-headers
+RUN pip3 install django daphne channels pillow numpy tensorflow pymongo django-cors-headers channels_redis
 
 COPY . .
 
