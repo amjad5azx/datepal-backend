@@ -46,7 +46,9 @@ class DateImageConsumer(AsyncWebsocketConsumer):
             print("Available collections:", collection_names)
                 
             collection=db[collection_names[0]]
-            record = collection.find_one({"name": predicted_class_name}, {"_id": 0})
+            # record = collection.find_one({"name": predicted_class_name}, {"_id": 0})
+            record = {"name": predicted_class_name}
+
                 
             if record:
                 await self.send(text_data=json.dumps(record))
