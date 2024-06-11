@@ -86,7 +86,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("54.237.12.109", 6379)],
+            "hosts": [("52.207.208.211", 6379)],
         },
     },
 }
